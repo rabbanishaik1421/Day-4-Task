@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Array</title>
+</head>
+<body>
+    <script>
+    var arr = [25, 2, 15, 5, 7, 18, 3, 32];
+    
+    //IIFE function
+    (function(){        
+        var total = 0;
+        for(i=0; i<arr.length; i++){
+            total = total + arr[i];
+        }
+
+        console.log('Sum of array with IIF function...')
+        console.log(total);
+    })();
+
+    //Anonymous function
+    var sumofarray = function(){
+        var total = 0;
+        for(i=0; i<arr.length; i++){
+            total = total + arr[i];
+        }
+        console.log('Sum of array with Anonymous function...')
+        console.log(total);
+    }
+
+    sumofarray();
+    </script>
+</body>
+</html>

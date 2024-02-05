@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title Case</title>
+</head>
+<body>
+    <script>
+        var arr = ["hi", "world", "test", "hello guvi"];
+        
+        //Anonymouse function
+        var newArr = [];
+
+        const titleCase = function(arr){
+            for(i=0; i<arr.length; i++){
+                //console.log(arr[i]);
+                var str = arr[i];
+                var splitStr = str.split(' ');
+                var newWord = [];
+                for(w=0; w<splitStr.length; w++){
+                    var firstLetter = splitStr[w].charAt(0).toUpperCase();
+                    newWord.push(firstLetter+splitStr[w].slice(1));
+                }
+
+                newArr.push(newWord.join(' '));
+
+            }
+            console.log("Title Case : Anonymous Function")
+            console.log(newArr);
+        }
+
+        titleCase(arr);
+
+        //IIFE function
+        (function(){
+            var newArr2 = [];
+
+            for(i=0; i<arr.length; i++){
+                //console.log(arr[i]);
+                var str = arr[i];
+                var splitStr = str.split(' ');
+                var newWord = [];
+                for(w=0; w<splitStr.length; w++){
+                    var firstLetter = splitStr[w].charAt(0).toUpperCase();
+                    newWord.push(firstLetter+splitStr[w].slice(1));
+                }
+
+                newArr2.push(newWord.join(' '));
+
+            }
+            console.log("Title Case : IIFE Function")
+            console.log(newArr2);    
+        })();
+        
+    </script>
+</body>
+</html>

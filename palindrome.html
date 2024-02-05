@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palilndrome</title>
+</head>
+<body>
+    <script>
+        const arr = ['level', 'hello', 'madam', 'guvi' ];
+        const Palilndrome1 = [];
+        const Palilndrome2 = [];
+
+        console.log("Palindrome : Anonymous Function")
+        const palindrome = function(){
+            for(i=0;i<arr.length; i++){
+                var str = arr[i].split('');
+                var revstr = str.reverse();
+                var newstr = revstr.join('');
+                if(arr[i] == newstr){
+                    Palilndrome1.push(newstr);
+                }
+            }
+
+            console.log(Palilndrome1.join(', '))
+        }
+
+        palindrome();
+
+        console.log("Palindrome : IIFE Function");
+        
+        (function(){
+            for(i=0;i<arr.length; i++){
+                var str = arr[i].split('');
+                var revstr = str.reverse();
+                var newstr = revstr.join('');
+                if(arr[i] == newstr){
+                    Palilndrome2.push(newstr);
+                }
+            }
+
+            console.log(Palilndrome2.join(', '))
+        })(arr);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function - Odd Numbers</title>
+</head>
+<body>
+    <script>
+    var arr = [2,7,23,16,22,98,75,71,81,3];
+    
+    //Odd numbers using arrow function
+    console.log('Odd numbers using arrow function')
+    const oddnumbers = (arr) => { 
+        for(i=0; i<arr.length; i++){
+            var num = arr[i];
+            if(num % 2 != 0){
+                console.log(num);
+            }
+        }
+    }
+    
+
+    oddnumbers(arr)
+/*        // Arrow function with one parameter
+const square = x => x * x;
+
+// Arrow function with no parameters
+const greet = () => console.log("Hello!");
+
+// Arrow function with multiple parameters
+const add = (a, b) => {
+    const sum = a + b;
+    return sum;
+};
+
+// Arrow function with an implicit return
+const double = x => x * 2;
+
+// Arrow function with no parameters and implicit return
+const getRandomNumber = () => Math.random();
+
+// Arrow function with an object literal as the return value
+const createPerson = (name, age) => ({ name, age });
+
+// Arrow function in a higher-order function
+const numbers = [1, 2, 3];
+const squared = numbers.map(x => x * x);
+
+console.log(squared)
+*/
+
+    </script>
+</body>
+</html>

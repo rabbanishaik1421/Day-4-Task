@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr = [10,20,30,40,50];
+
+        //let res = arr.map((element,index)=>console.log(index + (element*2)));
+
+        let arrobj = [
+            {key:1, value:10},
+            {key:2, value:20},
+            {key:3, value:30},
+        ]
+        //console.log(arrobj)
+        let arr1 = [];
+        let res = arrobj.map((element, index)=>{arr1.push(element.value)})
+        console.log(arr1)
+    </script>
+</body>
+</html>

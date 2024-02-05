@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Median of Array</title>
+</head>
+<body>
+    <script>
+        const arr1 = [2,4,5];
+        const arr2 = [7,8,9];
+
+        //Anonymous function
+        const medianarr = function(arr1, arr2){
+            const arrmerge = arr1.concat(arr2).sort((a, b) => a-b);
+            const length = arrmerge.length;
+            if(length % 2 === 0){
+                const md1 = arrmerge[length/2 - 1];
+                const md2 = arrmerge[length/2];
+
+                const mid = (md1 + md2) / 2;
+                console.log("Median of Array : Anonymous Function");
+                console.log(mid)
+            }
+        }
+
+        medianarr(arr1, arr2);
+
+        //IIF Function
+        (function(){
+            const arrmerge = arr1.concat(arr2).sort((a, b) => a-b);
+            const length = arrmerge.length;
+            if(length % 2 === 0){
+                const md1 = arrmerge[length/2 - 1];
+                const md2 = arrmerge[length/2];
+
+                const mid = (md1 + md2) / 2;
+                console.log("Median of Array : IIF Function");
+                console.log(mid)
+            }
+        })(arr1, arr2);
+    </script>
+</body>
+</html>

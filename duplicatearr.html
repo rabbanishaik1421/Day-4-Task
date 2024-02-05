@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duplicate Arr</title>
+</head>
+<body>
+    <script> 
+        var arr = [1,2,3,3,2,1];
+        var newarr = [];
+        var newarr1 = [];
+
+        const duplicatearr = function(arr){
+            for(i=0;i<arr.length;i++){
+                if(newarr.indexOf(arr[i])<0){
+                    newarr.push(arr[i]);
+                }
+            }
+            console.log("Duplicate Array : Anonymous Function")
+            console.log(newarr);
+        }
+
+        duplicatearr(arr);
+
+        (function(){
+            for(i=0;i<arr.length;i++){
+                if(newarr1.indexOf(arr[i])<0){
+                    newarr1.push(arr[i]);
+                }
+            }
+            console.log("Duplicate Array : IIF Function")
+            console.log(newarr1);
+        })(arr);
+        
+    </script>
+</body>
+</html>
